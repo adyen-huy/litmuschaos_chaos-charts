@@ -9,9 +9,12 @@
 
 This repository hosts the Litmus Chaos Charts. A set of related chaos faults are bundled into a Chaos Chart. Chaos Charts are classified into the following categories.
 
-- [Kubernetes Chaos](#kubernetes-chaos)
-- [Application Chaos](#application-chaos)
-- [Platform Chaos](#platform-chaos)
+- [Chaos-Charts](#chaos-charts)
+    - [Kubernetes Chaos](#kubernetes-chaos)
+    - [Application Chaos](#application-chaos)
+    - [Platform Chaos](#platform-chaos)
+  - [Installation Steps for Chart Releases](#installation-steps-for-chart-releases)
+  - [License](#license)
 
 ### Kubernetes Chaos
 
