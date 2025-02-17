@@ -53,7 +53,7 @@ spec:
         resources: ["chaosengines", "chaosexperiments", "chaosresults"]
         verbs: ["create", "list", "get", "patch", "update", "delete"]
     image: "litmuschaos/go-runner:latest"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name nomad-stop-alloc
