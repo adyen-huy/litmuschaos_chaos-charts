@@ -1,0 +1,5 @@
+packageName: nomad
+experiments:
+  - name: nomad-stop-alloc
+    CSV: nomad-stop-alloc.chartserviceversion.yaml
+    desc: "nomad-stop-alloc"
