@@ -1,0 +1,29 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: nomad 
+  version: 0.1.0
+  annotations:
+    categories: nomad
+spec:
+  displayName: nomad chaos
+  categoryDescription: >
+    It pretends to connect to Nomad, but just prints a log line
+  faults:
+    - name: nomad-fake-print-log
+      description: It pretends to connect to Nomad, but just prints a log line.
+      displayName: "Nomad fake print log"
+  keywords: 
+    - "nomad"
+  maintainers: 
+    - name: huy 
+      email: huy.nguyen@adyen.com
+  minKubeVersion: 1.12.0 
+  provider: 
+    name: Adyen
+  links: 
+    - name: Documentation 
+      url: https://docs.litmuschaos.io/docs/getstarted/ 
+  icon:
+    - url: 
+      mediatype: ""

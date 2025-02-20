@@ -1,0 +1,5 @@
+packageName: nomad
+experiments:
+  - name: nomad-fake-print-log
+    CSV: nomad-fake-print-log.chartserviceversion.yaml
+    desc: "nomad-fake-print-log"

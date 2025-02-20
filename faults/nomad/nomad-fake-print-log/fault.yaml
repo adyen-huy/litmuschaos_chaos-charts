@@ -1,0 +1,63 @@
+apiVersion: litmuschaos.io/v1alpha1
+description:
+  message: |
+    It pretends to connect to Nomad, but just prints a log line
+kind: ChaosExperiment
+metadata:
+  name: nomad-fake-print-log
+  labels:
+    name: nomad-fake-print-log
+    app.kubernetes.io/part-of: litmus
+    app.kubernetes.io/component: chaosexperiment
+    app.kubernetes.io/version: latest
+spec:
+  definition:
+    scope: Namespaced
+    permissions:
+      - apiGroups: 
+          - "" 
+          - "batch" 
+          - "apps" 
+          - "litmuschaos.io"
+        resources: 
+          - "jobs" 
+          - "pods" 
+          - "pods/log" 
+          - "events" 
+          - "deployments" 
+          - "replicasets" 
+          - "pods/exec" 
+          - "chaosengines" 
+          - "chaosexperiments" 
+          - "chaosresults"
+        verbs: 
+          - "create" 
+          - "list" 
+          - "get" 
+          - "patch" 
+          - "update" 
+          - "delete" 
+          - "deletecollection"
+    image: "litmuschaos/go-runner:latest"
+    imagePullPolicy: Always
+    args:
+    - -c
+    - ./experiments -name nomad-fake-print-log
+    command:
+    - /bin/bash
+    env:
+
+    - name: TOTAL_CHAOS_DURATION
+      value: '' 
+
+    - name: CHAOS_INTERVAL
+      value: ''
+
+    - name: RAMP_TIME
+      value: ''
+      
+    labels:
+      name: nomad-fake-print-log
+      app.kubernetes.io/part-of: litmus
+      app.kubernetes.io/component: experiment-job
+      app.kubernetes.io/version: latest 

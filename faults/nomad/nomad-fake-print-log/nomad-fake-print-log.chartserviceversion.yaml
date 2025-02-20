@@ -1,0 +1,32 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: nomad-fake-print-log
+  version: 0.1.0
+  annotations:
+    categories: nomad
+spec:
+  displayName: nomad-fake-print-log
+  categoryDescription: "It pretends to connect to Nomad, but just prints a log line \n"
+  keywords:
+    - "nomad"
+    - "fake"
+    - "test"
+  platforms:
+    - "Nomad"
+  maturity: alpha
+  maintainers:
+    - name: huy
+      email: huy.nguyen@adyen.com
+  minKubeVersion: 1.12.0
+  provider:
+    name: Adyen
+  labels:
+    app.kubernetes.io/component: chartserviceversion
+    app.kubernetes.io/version: latest
+  links:
+    - name: Documentation
+      url: https://gitlab-infra.is.adyen.com/mirroring/litmuschaos_litmus-go
+  icon:
+    - url:
+      mediatype: ""
